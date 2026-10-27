@@ -17,7 +17,8 @@ btn.addEventListener('click', function () {
     ImageCrop.showCropDialog({
         doneButtonTitle: L('Done', 'Fertig'),
         cancelButtonTitle: L('Cancel', 'Abbrechen'),
-        aspectRatio: ImageCrop.ASPECT_RATIO_SQUARE,
+        aspectRatioLocked: true, // Defaults to a fixed 1:1 crop with no ratio picker.
+        // aspectRatio: { x: 4, y: 3 }, // Optional fixed width-to-height ratio.
         image: 'example.jpg'
     });
 });
